@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+import { useState } from 'react';
 
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmark }) => {
     const { title,
         cover,
         author,
@@ -11,8 +12,18 @@ const Blog = ({ blog }) => {
         posted_date,
         reading_time,
         hashtags } = blog;
-    const bookmarkIcon = <FontAwesomeIcon className="fa-xl" icon={faBookmark} />;
     const flexStyle = "flex justify-between items-center";
+    const [bookmarkState, setBookmarkState] = useState(false);
+    const [bookmarkNotification, setBookmarkNotification] = useState(false);
+    const bookmarkIcon = <FontAwesomeIcon className={`fa-xl ${bookmarkNotification ? 'fa-shake' : ''}`} icon={faBookmark} />;
+    const handleOnclick = () => {
+        setBookmarkNotification(true);
+        setTimeout(() => {
+            setBookmarkState(true);
+            setBookmarkNotification(false);
+        }, 1200);
+        handleBookmark(title, parseInt(reading_time));
+    };
     return (
         <div className="card space-y-4">
             <figure>
@@ -29,17 +40,18 @@ const Blog = ({ blog }) => {
                     </div>
                     <div className={`${flexStyle} gap-2 text-xl font-medium opacity-60`}>
                         <h3>{reading_time} Min ago</h3>
-                        <button className="btn btn-ghost">{bookmarkIcon}</button>
+                        <button onClick={() => handleOnclick()} className={`btn btn-ghost ${bookmarkState ? '' : 'hover:scale-125'}`} disabled={(bookmarkState || bookmarkNotification) ? true : false}>{bookmarkIcon}</button>
                     </div>
                 </div>
                 <h2 className="text-[40px] font-bold">{title}</h2>
                 <span className="opacity-60 text-xl font-medium my-2">{hashtags.map(tagName => '#' + tagName + ' ')}</span>
-                <a className="w-fit hover:cursor-pointer underline text-cusBlue text-xl font-medium">Mark as read</a>
+                <button className="w-fit hover:cursor-pointer hover:font-semibold underline text-cusBlue text-xl font-medium">Mark as read</button>
             </div>
         </div >
     );
 };
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleBookmark: PropTypes.func.isRequired
 }
 export default Blog; 
