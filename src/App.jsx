@@ -11,9 +11,9 @@ function App() {
     setBookmarks(updatedBookmark);
   }
   return (
-    <div className="container max-w-screen-xl mx-auto font-exo2 text-cusBlack">
+    <div className="max-w-80 md:container xl:max-w-screen-xl mx-auto font-exo2 text-cusBlack">
       <Header></Header>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-6 mt-6">
         <div className="md:col-span-2">
           <Blogs handleBookmark={handleBookmark}></Blogs>
         </div>

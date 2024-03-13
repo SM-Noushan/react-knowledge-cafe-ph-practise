@@ -12,7 +12,7 @@ function Blogs({ handleBookmark }) {
 
     return (
         <div>
-            <div className="space-y-24">
+            <div className="space-y-16 lg:space-y-20">
                 {
                     blogs.map(blog => <Blog
                         key={blog.id}
