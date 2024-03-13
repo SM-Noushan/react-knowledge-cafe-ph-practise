@@ -1,58 +1,56 @@
 [
     {
-        "ID": 1006,
-        "Cover": "../src/assets/images/1.jpg",
-        "Title": "The Dawn of Modernism",
-        "Author": "John Doe",
-        "Author_img": "../src/assets/images/boy1.png",
-        "Posted_date": "Mar 10 (3 Days ago)",
-        "Reading_time": "5",
-        "Hashtags": [
-            "Art",
-            "Modernism",
-            "Culture"
+        "id": 1006,
+        "cover": "https://i.ibb.co/84Zfw2n/1.jpg",
+        "title": "Top 10 ES6 Features You Must Know",
+        "author": "John Doe",
+        "author_img": "https://i.ibb.co/VvLNdLL/boy1.png",
+        "posted_date": "Mar 10 (3 Days ago)",
+        "reading_time": "5",
+        "hashtags": [
+            "beginners",
+            "js",
+            "es6"
         ]
     },
     {
-        "ID": 1007,
-        "Cover": "../src/assets/images/1.jpg",
-        "Title": "Urbanization and Its Impact",
-        "Author": "Jane Smith",
-        "Author_img": "https://example.com/jane_smith.jpg",
-        "Posted_date": "Mar 11 (2 Days ago)",
-        "Reading_time": "7",
-        "Hashtags": [
-            "Urbanization",
-            "Society",
-            "Development"
+        "id": 1007,
+        "cover": "https://i.ibb.co/6N2dgnZ/2.png",
+        "title": "Javascript Object for Absolute Beginners: A Fun Introduction",
+        "author": "Jane Smith",
+        "author_img": "https://i.ibb.co/7rFSJx5/girl1.jpg",
+        "posted_date": "Mar 11 (2 Days ago)",
+        "reading_time": "7",
+        "hashtags": [
+            "beginners",
+            "js"
         ]
     },
     {
-        "ID": 1008,
-        "Cover": "../src/assets/images/1.jpg",
-        "Title": "Exploring the Cosmos",
-        "Author": "Neil Armstrong",
-        "Author_img": "https://example.com/neil_armstrong.jpg",
-        "Posted_date": "Mar 7 (6 Days ago)",
-        "Reading_time": "10",
-        "Hashtags": [
-            "Space",
-            "Cosmos",
-            "Exploration"
+        "id": 1008,
+        "cover": "https://i.ibb.co/RzGzcPg/3.png",
+        "title": "Component Life Cycle in React: Class Component vs Functional Component",
+        "author": "Neil Armstrong",
+        "author_img": "https://i.ibb.co/vwGwnhT/boy2.png",
+        "posted_date": "Mar 7 (6 Days ago)",
+        "reading_time": "10",
+        "hashtags": [
+            "programming",
+            "dev",
+            "react"
         ]
     },
     {
-        "ID": 1009,
-        "Cover": "../src/assets/images/1.jpg",
-        "Title": "The Beauty of Wilderness",
-        "Author": "David Attenborough",
-        "Author_img": "https://example.com/david_attenborough.jpg",
-        "Posted_date": "Mar 12 (1 Days ago)",
-        "Reading_time": "6",
-        "Hashtags": [
-            "Nature",
-            "Wilderness",
-            "Beauty"
+        "id": 1009,
+        "cover": "https://i.ibb.co/vvTfkcv/4.jpg",
+        "title": "Free Resource Collection for Website",
+        "author": "David Attenborough",
+        "author_img": "https://i.ibb.co/Sn7zB4q/girl2.jpg",
+        "posted_date": "Mar 12 (1 Days ago)",
+        "reading_time": "6",
+        "hashtags": [
+            "dev",
+            "resources"
         ]
     }
 ]
