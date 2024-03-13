@@ -1,0 +1,58 @@
+[
+    {
+        "ID": 1006,
+        "Cover": "../src/assets/images/1.jpg",
+        "Title": "The Dawn of Modernism",
+        "Author": "John Doe",
+        "Author_img": "../src/assets/images/boy1.png",
+        "Posted_date": "Mar 10 (3 Days ago)",
+        "Reading_time": "5",
+        "Hashtags": [
+            "Art",
+            "Modernism",
+            "Culture"
+        ]
+    },
+    {
+        "ID": 1007,
+        "Cover": "../src/assets/images/1.jpg",
+        "Title": "Urbanization and Its Impact",
+        "Author": "Jane Smith",
+        "Author_img": "https://example.com/jane_smith.jpg",
+        "Posted_date": "Mar 11 (2 Days ago)",
+        "Reading_time": "7",
+        "Hashtags": [
+            "Urbanization",
+            "Society",
+            "Development"
+        ]
+    },
+    {
+        "ID": 1008,
+        "Cover": "../src/assets/images/1.jpg",
+        "Title": "Exploring the Cosmos",
+        "Author": "Neil Armstrong",
+        "Author_img": "https://example.com/neil_armstrong.jpg",
+        "Posted_date": "Mar 7 (6 Days ago)",
+        "Reading_time": "10",
+        "Hashtags": [
+            "Space",
+            "Cosmos",
+            "Exploration"
+        ]
+    },
+    {
+        "ID": 1009,
+        "Cover": "../src/assets/images/1.jpg",
+        "Title": "The Beauty of Wilderness",
+        "Author": "David Attenborough",
+        "Author_img": "https://example.com/david_attenborough.jpg",
+        "Posted_date": "Mar 12 (1 Days ago)",
+        "Reading_time": "6",
+        "Hashtags": [
+            "Nature",
+            "Wilderness",
+            "Beauty"
+        ]
+    }
+]

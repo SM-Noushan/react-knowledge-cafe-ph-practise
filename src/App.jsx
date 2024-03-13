@@ -1,7 +1,9 @@
+import Header from "./components/header/Header";
+
 function App() {
   return (
     <div className="container max-w-screen-xl mx-auto">
-      <h1>Knowledge Cafe SPA</h1>
+      <Header></Header>
     </div>
   )
 }
