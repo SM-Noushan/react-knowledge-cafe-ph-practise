@@ -4,7 +4,7 @@ import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { useState } from 'react';
 
 
-const Blog = ({ blog, handleBookmark }) => {
+const Blog = ({ blog, handleBookmark, handleReadTime }) => {
     const { title,
         cover,
         author,
@@ -13,6 +13,7 @@ const Blog = ({ blog, handleBookmark }) => {
         reading_time,
         hashtags } = blog;
     const flexStyle = "flex justify-between items-center";
+    const [timeState, setTimeState] = useState(false);
     const [bookmarkState, setBookmarkState] = useState(false);
     const [bookmarkNotification, setBookmarkNotification] = useState(false);
     const bookmarkIcon = <FontAwesomeIcon className={`fa-xl ${bookmarkNotification ? 'fa-shake' : ''}`} icon={faBookmark} />;
@@ -22,7 +23,11 @@ const Blog = ({ blog, handleBookmark }) => {
             setBookmarkState(true);
             setBookmarkNotification(false);
         }, 1200);
-        handleBookmark(title, parseInt(reading_time));
+        handleBookmark(title);
+    };
+    const handleReadingTime = () => {
+        setTimeState(true);
+        handleReadTime(parseInt(reading_time));
     };
     return (
         <div className="card space-y-4">
@@ -46,7 +51,7 @@ const Blog = ({ blog, handleBookmark }) => {
                 <h2 className="text-xl lg:text-[40px] font-bold">{title}</h2>
                 <div className="flex items-center justify-between">
                     <span className="opacity-60 text-sm md:text-xl font-medium">{hashtags.map(tagName => '#' + tagName + ' ')}</span>
-                    <button className="w-fit hover:cursor-pointer hover:font-semibold underline text-cusBlue text-sm md:text-xl font-medium">Mark as read</button>
+                    <button onClick={handleReadingTime} className={`w-fit text-cusBlue underline text-sm md:text-xl font-medium ${timeState ? 'opacity-55' : 'hover:cursor-pointer hover:font-semibold'}`} disabled={timeState}>Mark as read</button>
                 </div>
             </div>
         </div >
@@ -54,6 +59,7 @@ const Blog = ({ blog, handleBookmark }) => {
 };
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
-    handleBookmark: PropTypes.func.isRequired
+    handleBookmark: PropTypes.func.isRequired,
+    handleReadTime: PropTypes.func.isRequired
 }
 export default Blog; 
