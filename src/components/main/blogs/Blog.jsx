@@ -51,7 +51,7 @@ const Blog = ({ blog, handleBookmark, handleReadTime }) => {
                 <h2 className="text-xl lg:text-[40px] font-bold">{title}</h2>
                 <div className="flex items-center justify-between">
                     <span className="opacity-60 text-sm md:text-xl font-medium">{hashtags.map(tagName => '#' + tagName + ' ')}</span>
-                    <button onClick={handleReadingTime} className={`w-fit text-cusBlue underline text-sm md:text-xl font-medium ${timeState ? 'opacity-55' : 'hover:cursor-pointer hover:font-semibold'}`} disabled={timeState}>Mark as read</button>
+                    <button onClick={handleReadingTime} className={`w-fit text-cusBlue underline text-sm md:text-xl font-medium ${timeState ? 'opacity-55' : 'hover:cursor-pointer hover:font-semibold'}`} disabled={timeState}>{timeState ? 'Marked' : 'Mark'}  as read</button>
                 </div>
             </div>
         </div >
